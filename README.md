@@ -4,7 +4,7 @@
 
 Desenvolver uma aplicação front-end de acordo com as especificações descritas nos **requisitos** utilizando a _stack_ tecnologica de sua preferencia.
 
-- Desenvolva este Layout: https://xd.adobe.com/spec/9c4a9206-ac61-4050-796d-89c00fb79e91-ea7b
+- Desenvolva este Layout: https://www.figma.com/file/T8UFXxs6G9yIQRq1N4bOAV/Teste-Frontend-Bexs?node-id=1%3A2
 - Utilize a tecnologia de sua preferencia (ReactJs, Angular, Angularjs, Vue.js, Jquery, Bootstrap, Material, Nodejs, Java, C#, PHP, etc).
 
 ## Como entregar sua solução?
