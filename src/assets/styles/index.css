@@ -71,10 +71,44 @@
  * CardArt
 **/
 .main-container .card-art {
-  background-color: var(--gray);
   position: absolute;
   width: 280px;
   height: 172px;
   top: 142px;
   border-radius: 10px;
+  padding: 30px 15px;
+  box-sizing: border-box;
+  color: var(--white);
+  background: radial-gradient(73.06% 104.31% at 14.59% 58.06%, var(--pale-gradient1) 0%, var(--pale-gradient1) 0.01%, var(--pale-gradient2) 33.7%, var(--pale-gradient3) 100%);
+}
+.main-container .card-art.card-art--bright {
+  position: absolute;
+  width: 280px;
+  height: 172px;
+  top: 142px;
+  border-radius: 10px;
+  padding: 30px 15px;
+  box-sizing: border-box;
+  color: var(--white);
+  background: radial-gradient(73.06% 104.31% at 14.59% 58.06%, var(--bright-gradient1) 0%, var(--bright-gradient2) 33.7%, var(--bright-gradient3) 57.29%, var(--bright-gradient4) 100%);
+}
+.main-container .card-art .card-art__brand {
+  height: 20px;
+  margin-bottom: 42px;
+}
+.main-container .card-art .card-art__brand img{
+  height: 100%;
+}
+.main-container .card-art .card-art__number {
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+.main-container .card-art .card-art__number span{
+  margin-right: 10px;
+}
+.main-container .card-art .card-art__info {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
 }

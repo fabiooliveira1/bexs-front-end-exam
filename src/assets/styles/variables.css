@@ -2,5 +2,13 @@
   --primary-green: #4BDE95;
   --secondary-green: #308E5F;
   --white: #ffffff;
-  --gray: #5A7589;
+
+  --pale-gradient1: #BFBFBF;
+  --pale-gradient2: #A8A8A8;
+  --pale-gradient3: #727272;
+
+  --bright-gradient1: #5A7589;
+  --bright-gradient2: #436175;
+  --bright-gradient3: #315266;
+  --bright-gradient4: #124768;
 }
