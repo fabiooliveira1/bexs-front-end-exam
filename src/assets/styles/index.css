@@ -6,22 +6,70 @@
   display: flex;
   flex-flow: column;
   align-items: center;
+  box-sizing: border-box;
+
 }
 
+/**
+ * NavBar
+**/
 .main-container .nav-bar {
   background-color: var(--primary-green);
-  flex: 1;
   min-height: 240px;
   width: 100%;
+  padding-top: 38px;
+  box-sizing: border-box;
+  color: var(--white);
+}
+.main-container .nav-bar .nav-bar__steps{
+  font-size: 13px;
+  line-height: 20px;
+  width: 100%;
+  text-align: center;
+}
+.main-container .nav-bar .nav-bar__steps a{
+  font-family: Material Icons;
+  position: absolute;
+  left: 19px;
+  font-size: 30px;
+}
+.main-container .nav-bar .nav-bar__steps .nav-bar__steps--heavy{
+  font-weight: 700;
 }
 
+.main-container .nav-bar .nav-bar__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-top: 30px;
+  padding: 0 50px;
+}
+
+.main-container .nav-bar .nav-bar__title .nav-bar__image-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  min-width: 36px;
+  border: solid 2px var(--white);
+  border-radius: 50%;
+  margin-right: 17px;
+}
+
+/**
+ * CardForm
+**/
 .main-container .card-form {
   background-color: var(--secondary-green);
-  flex: 2;
   width: 100%;
+  flex: 1;
   padding-top: 126px;
 }
 
+/**
+ * CardArt
+**/
 .main-container .card-art {
   background-color: var(--gray);
   position: absolute;

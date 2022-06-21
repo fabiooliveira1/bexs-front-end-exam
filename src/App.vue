@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <section class="main-container">
-      <NavBar />
+      <NavBar :currentStep="2" :totalSteps="3"/>
       <CardForm />
       <CardArt />
     </section>
