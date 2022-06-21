@@ -1,0 +1,32 @@
+@import './variables.css';
+@import './normalizer.css';
+
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.main-container .nav-bar {
+  background-color: var(--primary-green);
+  flex: 1;
+  min-height: 240px;
+  width: 100%;
+}
+
+.main-container .card-form {
+  background-color: var(--secondary-green);
+  flex: 2;
+  width: 100%;
+  padding-top: 126px;
+}
+
+.main-container .card-art {
+  background-color: var(--gray);
+  position: absolute;
+  width: 280px;
+  height: 172px;
+  top: 142px;
+  border-radius: 10px;
+}

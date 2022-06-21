@@ -1,46 +1,24 @@
-# Exame - Bexs Front-end
+# bexs-front-end-exam
 
-## Desafio
-
-Desenvolver uma aplicação front-end de acordo com as especificações descritas nos **requisitos** utilizando a _stack_ tecnologica de sua preferencia.
-
-- Desenvolva este Layout: https://www.figma.com/file/T8UFXxs6G9yIQRq1N4bOAV/Teste-Frontend-Bexs?node-id=1%3A2
-- Utilize a tecnologia de sua preferencia (ReactJs, Angular, Angularjs, Vue.js, Jquery, Bootstrap, Material, Nodejs, Java, C#, PHP, etc).
-
-## Como entregar sua solução?
-
-1. Clone do repositório
-
-2. Tente explicar a evolução do projeto em _commits_.
-
-3. Caso use algum _task runner_/_module bundle_ - faça o commit da ultima versão build/bundle.
-
-4. Para nos enviar seu teste escolha uma das formas:
-
-### Gerar um patch:
-
-Para gerar o patch:
-
+## Project setup
 ```
-git format-patch origin/master --stdout > seu_nome.patch
+npm install
 ```
 
-Certifique que o patch irá funcionar executando >> `git apply seu_nome.patch` e nos envie através do email que entramos em contato
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-### Criando um repositório público:
+### Compiles and minifies for production
+```
+npm run build
+```
 
-Crie um repositório em uma plataforma de pública de repositórios (GitHub, BitBucket, GitLab, etc) e nos envie através do email que entramos em contato.
+### Lints and fixes files
+```
+npm run lint
+```
 
-## Requisitos
-
-- Faça códigos legiveis e utilize uma arquitetura de fácil entendimento.
-- Edite este Readme ou crie um novo Markdown explicando como um DEV deveria utilizar o projeto
-
-## Bonus
-
-- Testes automatizados.
-- Crie uma camada que efetue uma chamada REST para um endpoint fictício "/pagar" - iremos analisar apenas a estrutura
-
-## Dúvidas
-
-Entre em contato e nos questione.
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
