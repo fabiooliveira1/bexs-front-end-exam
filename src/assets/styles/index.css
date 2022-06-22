@@ -12,6 +12,12 @@
   box-sizing: border-box;
 }
 
+@media(min-width: 1024px) {
+  .main-container {
+    flex-flow: row;
+  }
+}
+
 /**
  * NavBar
 **/
@@ -38,7 +44,6 @@
 .main-container .nav-bar .nav-bar__steps .nav-bar__steps--heavy{
   font-weight: 700;
 }
-
 .main-container .nav-bar .nav-bar__title {
   display: flex;
   align-items: center;
@@ -47,7 +52,6 @@
   margin-top: 30px;
   padding: 0 50px;
 }
-
 .main-container .nav-bar .nav-bar__title .nav-bar__image-wrapper{
   display: flex;
   align-items: center;
@@ -57,6 +61,14 @@
   border: solid 2px var(--white);
   border-radius: 50%;
   margin-right: 17px;
+}
+
+@media(min-width: 1024px) {
+  .main-container .nav-bar {
+    min-height: 100vh;
+    max-width: 31%;
+    font-size: 20px;
+  }
 }
 
 /**
@@ -98,6 +110,12 @@
   padding: 15px 28px;
 }
 
+@media(min-width: 1024px) {
+  .main-container .card-form {
+    min-height: 100vh;
+    padding: 118px 5px 0 203px;
+  }
+}
 
 /**
  * CardArt
@@ -114,14 +132,6 @@
   background: radial-gradient(73.06% 104.31% at 14.59% 58.06%, var(--pale-gradient1) 0%, var(--pale-gradient1) 0.01%, var(--pale-gradient2) 33.7%, var(--pale-gradient3) 100%);
 }
 .main-container .card-art.card-art--bright {
-  position: absolute;
-  width: 280px;
-  height: 172px;
-  top: 142px;
-  border-radius: 10px;
-  padding: 30px 15px;
-  box-sizing: border-box;
-  color: var(--white);
   background: radial-gradient(73.06% 104.31% at 14.59% 58.06%, var(--bright-gradient1) 0%, var(--bright-gradient2) 33.7%, var(--bright-gradient3) 57.29%, var(--bright-gradient4) 100%);
 }
 .main-container .card-art .card-art__brand {
@@ -134,6 +144,7 @@
 .main-container .card-art .card-art__number {
   margin-bottom: 18px;
   font-size: 14px;
+  line-height: 17px;
 }
 .main-container .card-art .card-art__number span{
   margin-right: 10px;
@@ -143,4 +154,28 @@
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
+}
+@media(min-width: 1024px) {
+  .main-container .card-art {
+    width: 492px;
+    height: 302px;
+    left: calc(31vw - 313px);
+    top: 196px;
+    padding: 46px;
+  }
+  .main-container .card-art .card-art__brand {
+    height: 30px;
+    margin-bottom: 73px;
+  }
+  .main-container .card-art .card-art__number {
+    margin-bottom: 38px;
+    font-size: 26px;
+    line-height: 32px;
+  }
+  .main-container .card-art .card-art__number span{
+    margin-right: 20px;
+  }
+  .main-container .card-art .card-art__info {
+    font-size: 22px;
+  }
 }
