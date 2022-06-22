@@ -1,5 +1,21 @@
 <template>
   <form class="card-form" @submit.prevent="validateForm">
+    <div class="card-form__steps">
+      <div class="card-form__step-wrapper">
+        <img src="../assets/images/green-check.png">
+        Carrinho
+        <a>chevron_right</a>
+      </div>
+      <div class="card-form__step-wrapper">
+        <span>2</span>
+        Pagamento
+        <a>chevron_right</a>
+      </div>
+      <div class="card-form__step-wrapper">
+        <span>3</span>
+        Confirmação
+      </div>
+    </div>
     <md-field :class="{'md-invalid': errors.cardNumber}">
       <label>Número do cartão</label>
       <md-input v-model="values.cardNumber" maxlength="16" type="number"></md-input>
