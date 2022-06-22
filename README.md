@@ -10,10 +10,17 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Compiles and minifies for production into dist folder
 ```
 npm run build
 ```
+
+### Serve the dist folder locally
+```
+npm install -g serve
+serve -s dist
+```
+[Reference](https://cli.vuejs.org/guide/deployment.html#previewing-locally)
 
 ### Lints and fixes files
 ```
