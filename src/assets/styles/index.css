@@ -195,9 +195,11 @@
   box-sizing: border-box;
   color: var(--white);
   background: radial-gradient(73.06% 104.31% at 14.59% 58.06%, var(--pale-gradient1) 0%, var(--pale-gradient1) 0.01%, var(--pale-gradient2) 33.7%, var(--pale-gradient3) 100%);
+  box-shadow: 0 1.5em 0.5em -1em var(--pale-gradient3);
 }
 .main-container .card-art.card-art--bright {
   background: radial-gradient(73.06% 104.31% at 14.59% 58.06%, var(--bright-gradient1) 0%, var(--bright-gradient2) 33.7%, var(--bright-gradient3) 57.29%, var(--bright-gradient4) 100%);
+  box-shadow: 0 1.5em 0.5em -1em var(--bright-gradient4);
 }
 .main-container .card-art .card-art__brand {
   height: 20px;
