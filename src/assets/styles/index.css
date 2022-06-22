@@ -35,6 +35,9 @@
   width: 100%;
   text-align: center;
 }
+.main-container .nav-bar .nav-bar__steps--long{
+  display: none;
+}
 .main-container .nav-bar .nav-bar__steps a{
   font-family: Material Icons;
   position: absolute;
@@ -66,8 +69,31 @@
 @media(min-width: 1024px) {
   .main-container .nav-bar {
     min-height: 100vh;
-    max-width: 31%;
+    max-width: 325px;
     font-size: 20px;
+    padding-top: 51px;
+  }
+  .main-container .nav-bar .nav-bar__steps{
+    line-height: 16px;
+    text-align: left;
+    padding-left: 33px;
+  }
+  .main-container .nav-bar .nav-bar__steps--short{
+    display: none;
+  }
+  .main-container .nav-bar .nav-bar__steps--long{
+    display: flex;
+  }
+  .main-container .nav-bar .nav-bar__steps a{
+    left: 0px;
+    font-size: 30px;
+  }.main-container .nav-bar .nav-bar__title {
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-weight: 700;
+    margin-top: 52px;
+    padding: 0 52px 0 5px;
   }
 }
 
@@ -159,7 +185,7 @@
   .main-container .card-art {
     width: 492px;
     height: 302px;
-    left: calc(31vw - 313px);
+    left: 5px;
     top: 196px;
     padding: 46px;
   }
