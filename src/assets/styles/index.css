@@ -102,7 +102,7 @@
  * CardForm
 **/
 .main-container .card-form {
-  background-color: var(--light-gray);
+  background-color: var(--white);
   width: 100%;
   flex: 1;
   padding: 0 40px;
