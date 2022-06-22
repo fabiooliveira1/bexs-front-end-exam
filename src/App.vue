@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <section class="main-container">
-      <NavBar :currentStep="2" :totalSteps="3"/>
-      <CardForm />
-      <CardArt />
+      <NavBar :currentStep="2" :totalSteps="3" />
+      <CardForm @cardChange="handleCardChange" />
+      <CardArt :cardNumber="cardNumber" :name="name" :expirationDate="expirationDate" />
     </section>
   </div>
 </template>
@@ -19,6 +19,16 @@ export default {
     CardArt,
     CardForm,
     NavBar
+  },
+  data: () => ({
+    cardNumber: null,
+    name: null,
+    expirationDate: null
+  }),
+  methods: {
+    handleCardChange (event) {
+      this[event.key] = event.value
+    }
   }
 }
 </script>

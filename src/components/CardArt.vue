@@ -4,10 +4,10 @@
       <img v-if="cardBrand" :src="require(`../assets/images/${cardBrand}.png`)"/>
     </div>
     <div class="card-art__number">
-      <span v-for="(group, i) in cardNumberGrouped" :key="i">{{group}}</span>
+      <span v-for="(group, i) in formattedCardNumber" :key="i">{{group}}</span>
     </div>
     <div class="card-art__info">
-      <span>{{name}}</span><span>{{expirationDate}}</span>
+      <span>{{formattedName}}</span><span>{{formattedExpirationDate}}</span>
     </div>
   </div>
 </template>
@@ -26,15 +26,24 @@ export default {
       default: '00/00'
     },
     cardNumber: {
-      type: String,
-      default: ''
+      type: String
     }
   },
   computed: {
-    cardNumberGrouped() {
-      let fixedNumberSize = this.cardNumber + '*'.repeat(16)
+    formattedCardNumber() {
+      let fixedNumberSize = ''
+      if (typeof this.cardNumber === 'string') {
+        fixedNumberSize = this.cardNumber
+      }
+      fixedNumberSize += '*'.repeat(16)
       fixedNumberSize = fixedNumberSize.slice(0, 16)
       return fixedNumberSize.match(/.{1,4}/g)
+    },
+    formattedName() {
+      return this.name || 'Nome do Titular'
+    },
+    formattedExpirationDate() {
+      return this.expirationDate || '00/00'
     },
     cardBrand() {
       return getCardBrand(this.cardNumber)

@@ -1,3 +1,6 @@
+
+@import 'vue-material/dist/vue-material.min.css';
+@import 'vue-material/dist/theme/default.css';
 @import './variables.css';
 @import './normalizer.css';
 
@@ -7,7 +10,6 @@
   flex-flow: column;
   align-items: center;
   box-sizing: border-box;
-
 }
 
 /**
@@ -61,11 +63,41 @@
  * CardForm
 **/
 .main-container .card-form {
-  background-color: var(--secondary-green);
+  background-color: var(--light-gray);
   width: 100%;
   flex: 1;
-  padding-top: 126px;
+  padding: 0 40px;
+  padding-top: 106px;
 }
+.main-container .card-form .md-field {
+  margin-top: 0;
+}
+.main-container .card-form .md-field.md-field--half {
+  width: 48%;
+  display: inline-block;
+  margin-right: 2%;
+}
+.main-container .card-form .md-field.md-field--half.md-field--right {
+  margin-left: 2%;
+  margin-right: 0;
+}
+.main-container .card-form .card-form__buttons{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+.main-container .card-form .card-form__buttons .md-button {
+  margin: 0;
+  height: auto;
+}
+.main-container .card-form .card-form__buttons .md-button.md-button--secondary-green {
+  background-color: var(--secondary-green);
+  color: var(--white);
+  font-size: 15px;
+  padding: 15px 28px;
+}
+
 
 /**
  * CardArt
