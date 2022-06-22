@@ -139,6 +139,9 @@
   font-size: 15px;
   padding: 15px 28px;
 }
+.main-container .card-form .card-form__buttons .md-button.md-button--secondary-green:disabled {
+  background-color: var(--pale-gradient3);
+}
 
 @media(min-width: 1024px) {
   .main-container .card-form {

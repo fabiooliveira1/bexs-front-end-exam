@@ -36,12 +36,13 @@
       <span class="md-error">Insira o número de parcelas</span>
     </md-field>
     <div class="card-form__buttons">
-      <md-button class="md-button--secondary-green" type="submit">Continuar</md-button>
+      <md-button class="md-button--secondary-green" type="submit" :disabled="isLoading">Continuar</md-button>
     </div>
   </form>
 </template>
 
 <script>
+import { submitPayment } from '../services/payments'
 import { formatDecimal } from '../utils'
 
 export default {
@@ -78,7 +79,8 @@ export default {
       expirationDate: false,
       cvv: false,
       parts: false,
-    }
+    },
+    isLoading: false
   }),
   watch: {
     'values.cardNumber' (val) {
@@ -109,7 +111,19 @@ export default {
       error = this.isCVVInvalid() || error
       error = this.isPartsValueInvalid() || error
 
-      console.log(`is invalid: ${error}`)
+      if (!error) {
+        submitPayment({
+          cardNumber: this.values.cardNumber,
+          name: this.values.name,
+          expirationDate: this.values.expirationDate,
+          cvv: this.values.cvv,
+          parts: this.values.parts,
+          totalAmount: this.totalAmount
+        })
+          .then(()=> { this.isLoading = true })
+          .catch((e)=> { console.log(e.message) })
+          .finally(()=> { this.isLoading = false })
+      }
     },
     isCardNumberInvalid() {
       let error = false
