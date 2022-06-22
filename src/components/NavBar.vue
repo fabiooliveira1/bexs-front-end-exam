@@ -4,17 +4,17 @@
       <a>chevron_left</a>
       <div class="nav-bar__steps--short">
         <span class="nav-bar__steps--heavy">Etapa {{currentStep}} </span>
-        <span> de {{totalSteps}}</span>
+        <span> de {{steps.length}}</span>
       </div>
       <div class="nav-bar__steps--long">
-        <span>Alterar forma de pagamento</span>
+        <span>{{stepInfo.longLabel}}</span>
       </div>
     </div>
     <div class="nav-bar__title">
       <div class="nav-bar__image-wrapper">
-        <img src="../assets/images/card-icon.png">
+        <img :src="require(`../assets/images/${stepInfo.icon}`)">
       </div>
-      <p>Adicione um novo cartão de crédito</p>
+      <p>{{stepInfo.title}}</p>
     </div>
   </nav>
 </template>
@@ -23,8 +23,30 @@
 export default {
   name: 'NavBar',
   props: {
-    currentStep: Number,
-    totalSteps: Number
+    currentStep: {
+      type: Number,
+      default: 1
+    },
+    steps: {
+      type: Array,
+      default: () => []
+    }
+  },
+  computed: {
+    stepInfo () {
+      const item = this.steps.find(({ key }) => key === this.currentStep)
+      if (item) {
+        return item
+      }
+
+      return {
+        key: 1,
+        label: 'Carrinho',
+        longLabel: 'Gerenciar carrinho',
+        title: 'Adicione ou remova itens do carrinho',
+        icon: 'card-icon.png'
+      }
+    }
   }
 }
 </script>

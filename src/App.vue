@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <section class="main-container">
-      <NavBar :currentStep="2" :totalSteps="3" />
-      <CardForm @cardChange="handleCardChange" />
+      <NavBar :currentStep="2" :steps="steps" />
+      <CardForm @cardChange="handleCardChange" :currentStep="2" :steps="steps"/>
       <CardArt :cardNumber="cardNumber" :name="name" :expirationDate="expirationDate" />
     </section>
   </div>
@@ -23,7 +23,30 @@ export default {
   data: () => ({
     cardNumber: null,
     name: null,
-    expirationDate: null
+    expirationDate: null,
+    steps: [
+      {
+        key: 1,
+        label: 'Carrinho',
+        longLabel: 'Gerenciar carrinho',
+        title: 'Adicione ou remova itens do carrinho',
+        icon: 'card-icon.png'
+      },
+      {
+        key: 2,
+        label: 'Pagamento',
+        longLabel: 'Alterar forma de pagamento',
+        title: 'Adicione um novo cartão de crédito',
+        icon: 'card-icon.png'
+      },
+      {
+        key: 3,
+        label: 'Confirmação',
+        longLabel: 'Confirmação de compra',
+        title: 'Confirme seus dados para finalizar',
+        icon: 'card-icon.png'
+      }
+    ]
   }),
   methods: {
     handleCardChange (event) {

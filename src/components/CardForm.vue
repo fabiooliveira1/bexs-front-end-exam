@@ -1,19 +1,11 @@
 <template>
   <form class="card-form" @submit.prevent="validateForm">
     <div class="card-form__steps">
-      <div class="card-form__step-wrapper">
-        <img src="../assets/images/green-check.png">
-        Carrinho
-        <a>chevron_right</a>
-      </div>
-      <div class="card-form__step-wrapper">
-        <span>2</span>
-        Pagamento
-        <a>chevron_right</a>
-      </div>
-      <div class="card-form__step-wrapper">
-        <span>3</span>
-        Confirmação
+      <div class="card-form__step-wrapper" v-for="step in steps" :key="step.key">
+        <img v-if="currentStep > step.key" src="../assets/images/green-check.png">
+        <span v-else>{{step.key}}</span>
+        {{step.label}}
+        <a v-if="step.key < steps.length">chevron_right</a>
       </div>
     </div>
     <md-field :class="{'md-invalid': errors.cardNumber}">
@@ -62,6 +54,14 @@ export default {
     maxSplit: {
       type: Number,
       default: 12
+    },
+    currentStep: {
+      type: Number,
+      default: 1
+    },
+    steps: {
+      type: Array,
+      default: () => []
     }
   },
   data: () => ({
